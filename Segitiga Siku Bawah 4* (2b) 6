@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void variabel_tinggi_segitiga(int tinggi)
+{
+	int i, j;
+	for (int i = 1; i <= tinggi; i++) 
+  {
+    for (int j = i; j <= tinggi; j++) 
+	{
+      printf("*");
+    }
+    printf("\n");
+  }
+}
+
+int main()
+{
+	int tinggi = 4;
+	variabel_tinggi_segitiga(tinggi);
+ 
+return 0;
+}
+
