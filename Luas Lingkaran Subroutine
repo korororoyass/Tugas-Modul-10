@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+float r, luas;
+
+float hitung_luas_lingkaran (float r)
+{	
+  float pi = 3.14159; // inisialisasi nilai phi 
+    
+  luas = pi * r * r; //rumus luas lingkaran
+
+return luas;
+}
+
+int main ()
+{
+
+  //memasukkan input 
+	printf("Masukkan Nilai Jari-Jari Lingkaran : ");
+	scanf("%f", &r);
+
+  luas = hitung_luas_lingkaran (r);
+    
+  printf("Luas Lingkaran = %2f \n", luas);
+    
+return 0;
+}
