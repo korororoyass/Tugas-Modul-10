@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void sortir(int input)
+{
+    int genap=0,ganjil=0,i;
+    for ( int i = 1; i <= input; i++)
+    {
+        if (i % 2 == 0)
+        {
+            genap++;
+        } else{
+            ganjil++;
+        }   
+    }
+    printf("Banyaknya bilangan ganjil adalah : %d\n",ganjil);
+    printf("Banyaknya bilangan genap adalah : %d",genap);   
+}
+
+int main()
+{
+    int batas;
+    system("cls");
+    printf("Masukkan angka pembatas : ");
+    scanf ("%d",&batas);
+    sortir(batas);
+    return 0;
+}
