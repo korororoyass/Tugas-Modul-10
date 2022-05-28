@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+float rumus1 (float A, float N){
+    float hasil;
+    hasil = (A + N) / 2;
+    return hasil;
+    
+}
+
+float rumus2 (float A, float N)
+{
+    float hasil;
+    hasil = A * N;
+    return hasil;
+}
+
+float rumus3 (float A, float N)
+{
+    float hasil;
+    hasil = (A * A) - N;
+    return hasil;
+}
+
+void main ()
+{
+    float N,A,r,B;
+
+    system("cls");
+    printf("Pilihan rumus : \n 1.	B = (A + N) / 2 \n 2.	B = A * N \n 3.	B = (A * A) - N \n");
+
+    //Memasukkan input 
+	printf("Masukkan Nilai A (1 s/d 25) : ");
+	scanf("%f",&A);
+
+    printf("Masukkan Nilai N (1 s/d 25) : ");
+	scanf("%f",&N);
+
+    printf("Pilihan rumus/menu (1/2/3) : ");
+    scanf("%f",&r);
+
+    if (r == 1)
+    {
+        B = rumus1(A,N);
+        printf("Nilai B adalah = %.2f",B);
+    }
+    else 
+    {
+        if (r == 2)
+        {
+            B = rumus2(A,N);
+            printf("Nilai B adalah = %.2f",B);
+        }
+        else{
+            if (r == 3)
+            {
+                B = rumus3(A,N);
+                printf("Nilai B adalah = %.2f",B);    
+            }
+                else 
+                {
+                    printf("Tidak ada opsi");  
+                }
+        }
+    }
+}
