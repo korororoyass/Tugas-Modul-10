@@ -1,0 +1,81 @@
+#include <stdio.h>
+
+int x, y, matrix1[2][2], matrix2[2][2];
+int hasil[2][2];
+
+int membuat_matrix(int i, int j) 
+{
+    printf("Masukkan elemen matriks pertama: \n");
+
+    for (x = 0; x < i; x++) {
+        for (y = 0; y < j; y++) {
+            scanf("%d", &matrix1[x][y]);
+        }
+    }
+    
+    printf("\nOutput matriks pertama: \n");
+
+    for (x = 0; x < i; x++) {
+        printf("[ ");
+        for (y = 0; y < j; y++) 
+        {
+            printf("%d ", matrix1[x][y]);
+            if (y == 1) 
+            {
+                printf("]\n");
+            }
+        }
+    }
+    
+    printf("\nMasukkan elemen matriks kedua: \n");
+
+    for (x = 0; x < i; x++) 
+    {
+        for (y = 0; y < j; y++) 
+        {
+            scanf("%d", &matrix2[x][y]);
+        }
+    }
+    
+    printf("\nOutput matriks kedua: \n");
+    for (x = 0; x < i; x++) 
+    {
+        printf("[ ");
+        for (y = 0; y < j; y++) 
+        {
+            printf("%d ", matrix2[x][y]);
+            if (y == 1) {
+                printf("]\n");
+            }
+        }
+    }
+    return matrix1[2][2], matrix2[2][2];
+}
+
+int main() {
+
+    membuat_matrix(2, 2);
+
+    printf("\nHasil penjumlahan kedua matriks adalah: \n");
+    for (x = 0; x < 2; x++) 
+    {
+        for (y = 0; y < 2; y++) 
+        {
+            hasil[x][y] = matrix1[x][y] + matrix2[x][y]; 
+        }
+    }
+    // Menampilkan hasil penjumlahan
+    for (x = 0; x < 2; x++) 
+    {
+        printf("[ ");
+        for (y = 0; y < 2; y++) 
+        {
+            printf("%d ", hasil[x][y]);
+            if (y == 1)
+            {
+                printf("]\n");
+            }
+        }
+    }
+    return 0;
+}
