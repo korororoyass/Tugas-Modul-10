@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+//Deklarasi subrutin 
+void variabel_batasan();
+
+//Deklarasi tipe data integer
+int angka, i;
+
+//Fungsi Utama
+int main()
+{
+variabel_batasan();
+  	//Menggunaakn program perulangan untuk mencetak bilangan genap
+  	for ( i = 1; i <= angka; i++) 
+	  {
+	  
+	  if (i % 2 == 0 ) // Kondisi untuk memilih bilangan genap 
+	  	{
+    		printf("Angka %d adalah bilangan GENAP\n", i);
+		}
+		else 
+	  	{
+	  	
+  		}
+	}
+  return 0;
+}
+
+//Subrutin menacri batasan
+void variabel_batasan()
+{
+	printf("Masukkan pembatas untuk bialnagn genap yang dicari: \n");
+	scanf("%d", &angka);
+	
+}
